@@ -8,7 +8,7 @@
         "issues": "https://github.com/liberusoftware/module-cms-contracts/issues",
         "source": "https://github.com/liberusoftware/module-cms-contracts"
     },
-    "version": "0.1.0",
+    "version": "0.1.1",
     "require": {
         "php": "^8.5"
     },
@@ -28,5 +28,18 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "liberusoftware/package-testbench": "^1.8",
+        "pestphp/pest": "^5.3.3"
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "pest --coverage --min=100"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
